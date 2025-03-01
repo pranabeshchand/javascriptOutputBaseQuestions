@@ -776,8 +776,7 @@ console.log(a[6]);
 **[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
 
 **46. What is the difference between a method and a function in javascript?**
-```js 
-```
+
 <details>
 	<summary><b>View Answer</b></summary>
 <p><p>A function is a piece of code that is called by name and it is not associated with any object, nor defined inside an object. It can be passed data to operate on (i.e. parameter) and can optionally return data (the return value). E.g.:</p><pre><code class="javascript">/* Function definition*/<br>function myFunc() {<div style="text-indent: 10px">/* Do some stuff; */</div>}<br>myFunc();/* Calling the function */</code></pre><p>A method is a piece of code that is called by name and is defined inside an object. It is almost identical to a function except that it is always associated with an object and operating only on data inside it.</p><pre><code class="javascript">var methodObject = {<div style="text-indent: 10px">attribute: "xyz",</div><div style="text-indent: 10px">display: function () {  /* Method*/</div><div style="text-indent: 20px">console.log(this.attribute);</div><div style="text-indent: 10px">}</div>}methodObject.display(); /* Calling the method */</code></pre></p>
@@ -786,8 +785,7 @@ console.log(a[6]);
 **[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
 
 **47. Why would you use use strict at the beginning of a JavaScript source file?**
-```js 
-```
+
 <details>
 	<summary><b>View Answer</b></summary>
 <p><p>Using strict is a way to enforce strict parsing and error handling of the JavaScript code at runtime. This means that code errors that would have otherwise been ignored or would have failed silently, will now generate errors or throw exceptions.</p><p>Some benefits are: easier debugging; preventing accidental globals, eliminates misuse of <code>this</code> etc.</p></p>
@@ -796,35 +794,32 @@ console.log(a[6]);
 **[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
 
 **48. What is the reason for wrapping the entire content of a JavaScript source file in a function block?**
-```js 
-```
+
 <details>
 	<summary><b>View Answer</b></summary>
 <p>This is a common practice used in many popular JavaScript libraries (jQuery, Node.js, etc.). It creates a closure around the entire contents of the file which makes a private namespace and thereby avoids potential name clashes between different JavaScript modules and libraries.</p>
 </details>
 
 **[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
-**49. What is prototype property in JavaScript?**
-```js
-let arr = [3, 4, 3, 2, 3, 4, 5, -6, 7];
-arr.length = 0;
-console.log(arr);
-```
+
+**49. What is prototype property in JavaScript?** 
+
 <details>
 	<summary><b>View Answer</b></summary>
 <p>Every JavaScript function has a prototype property (by default this property is null), that is mainly used for implementing inheritance. We add methods and properties to a function's prototype so that it becomes available to instances of that function.</p>
 </details>
 
 **[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+
 **50. Explain the difference between class inheritance and prototypal inheritance.**
-```js 
-```
+
 <details>
 	<summary><b>View Answer</b></summary>
 <p><p></p><ul><li>Class Inheritance: A constructor function instantiates an instance via the "new" keyword. This new instance inherits properties from a parent class.</li><li>Prototypal Inheritance: An instance is created by cloning an existing object that serves as a prototype. Instances are typically instantiated via factory functions, object literals, or <code>Object.create()</code>. Instances may be composed from many different source objects, allowing for easy selective inheritance.</li></ul><p></p></p>
 </details>
 
 **[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+
 **51. How to call other class methods?**
 ```js 
 ```
@@ -834,6 +829,7 @@ console.log(arr);
 </details>
 
 **[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+
 **52. What is Scope in JavaScript?**
 ```js 
 ```
@@ -843,6 +839,7 @@ console.log(arr);
 </details>
 
 **[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+
 **53. What is the difference between declaring a function in the two formats below?**
 ```js
 var foo = function() {
@@ -858,9 +855,9 @@ function bar() {
 </details>
 
 **[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+
 **54. How does Array() differ from [] while creating a JavaScript array?**
-```js 
-```
+
 <details>
 	<summary><b>View Answer</b></summary>
 <p><p>Both the <code>Array()</code> and <code>[]</code> work almost the same in JavaScript.</p>
@@ -869,33 +866,34 @@ function bar() {
 </details>
 
 **[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+
 **55. What is the result of "10"+20+30 in JavaScript?**
-```js 
-```
+
 <details>
 	<summary><b>View Answer</b></summary>
 <p><p>The result is 102030 because when using the <code>+</code> operator with a string, it acts as a string concatenation operator (not binary <code>+</code>). To make it work as expected, you should parse the <code>"10"</code> to integer before doing the <code>+</code>.</p></p>
 </details>
 
 **[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+
 **56. What does the isNaN() function do?**
-```js 
-```
+
 <details>
 	<summary><b>View Answer</b></summary>
 <p>The <code>isNan()</code> function returns <code>true</code> if the variable value is not a number.</p>
 </details>
 
 **[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+
 **57. What is the difference between == and ===?**
-```js 
-```
+
 <details>
 	<summary><b>View Answer</b></summary>
 <p><p>The <code>==</code> operator checks equality only, whereas <code>===</code> checks equality and data type i.e. the values must be of the same type.</p></p>
 </details>
 
 **[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+
 **58. What will be the output of the code below?**
 ```js
 var trees = ["pine","apple","oak","maple","cherry"];
@@ -908,9 +906,9 @@ console.log(trees.length);
 </details>
 
 **[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+
 **59. What is a "closure" in JavaScript?**
-```js 
-```
+
 <details>
 	<summary><b>View Answer</b></summary>
 <p><p>A closure is a function defined inside another function (called the parent function), and has access to variables that are declared and defined in the parent function scope.</p>
@@ -924,9 +922,9 @@ console.log(trees.length);
 </details>
 
 **[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+
 **60. What is the difference between undefined and not defined in JavaScript?**
-```js 
-```
+
 <details>
 	<summary><b>View Answer</b></summary>
 <p><p>In JavaScript, if you try to use a variable that has not been declared, then JavaScript will throw an error <code>var x is not defined</code> and the script will stop executing. However, if you use <code>typeof undeclared_variable</code>, then it will return <code>undefined</code>.</p><p>Additionally, doing <code>console.log(x)</code>, when x has been declared, but not defined (doesn't have a value yet), will also print <code>undefined</code>.</p></p>
