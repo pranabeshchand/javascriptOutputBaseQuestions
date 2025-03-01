@@ -637,7 +637,7 @@ console.log(name);
 **37. What will be the output**
 ```js
 const person = {
-  firstName: 'Surbhi',
+  firstName: 'Pranabesh',
 };
 const { lastName="chand" } = person;
 console.log(lastName);
@@ -655,7 +655,7 @@ console.log(lastName);
 **38. What will be the output**
 ```js
 const person = {
-  firstName: 'Surbhi',
+  firstName: 'Pranabesh',
 };
 const { firstName="Henry"} = person;
 console.log(firstName);
@@ -663,8 +663,8 @@ console.log(firstName);
 <details>
 	<summary><b>View Answer</b></summary>
 <ul>	
-	<li><b>Output</b> : Surbhi</li>
-	<li><b>Reason</b> : The `firstName` property in the `person` object has the value 'Surbhi'. The default value "Henry" is ignored because it only applies when the property does not exist or is `undefined`</li>
+	<li><b>Output</b> : Pranabesh</li>
+	<li><b>Reason</b> : The `firstName` property in the `person` object has the value 'Pranabesh'. The default value "Henry" is ignored because it only applies when the property does not exist or is `undefined`</li>
 </ul>
 </details>
 
