@@ -700,3 +700,26 @@ console.log(Object.keys(arr));
 </details>
 
 **[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+
+**41. Consider the two functions below. Will they both return the same thing?**
+```js
+function foo1()
+{
+return {
+bar: "hello"
+};
+}
+function foo2()
+{
+return
+{
+bar: "hello"
+};
+} 
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<p>Surprisingly, no. JavaScript is very fogiving of missed semi-colons, so when you write a statement in new line without ending it with a <code>;</code>, it is automatically inserted by the engine. That will result in <code>foo2</code> returning <code>undefined</code>, while <code>foo1</code> an <code>object</code>.</p>
+</details>
+
+**[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
