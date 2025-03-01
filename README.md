@@ -723,3 +723,213 @@ bar: "hello"
 </details>
 
 **[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+
+**42. What will be the output of the following code?**
+```js
+var z = 1, y = z = typeof y;
+console.log(y);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<p>The above code will output <code>undefined</code>. The order of execution with the <code>=</code> operator is right to left, which means <code>typeof y</code> will execute first and will return <code>undefined</code>, which will then pass to <code>z</code> and <code>y</code>. Thus, <code>console.log(y);</code> will print <code>undefined</code>.</p>
+</details>
+
+**[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+
+**43. What will be the output of the following code?**
+```js
+var Employee = {
+company: 'Acme'
+}
+var employee1 = Object.create(Employee);
+delete employee1.company
+console.log(employee1.company);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<p>The above code will output <code>Acme</code>. For the object <code>employee1</code>, <code>company</code> is a prototype property that can't be deleted using the <code>delete</code> operator.</p>
+</details>
+
+**[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+
+**44. What will be the output**
+```js
+var a = [1, 2, 3];
+a[10] = 99;
+console.log(a[6]);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<p>When doing <code>a[10] = 99;</code> the JavaScript engine will set the array slots from 3 to 9 to an empty value. That would equal a declared, but not defined variable. Accordingly, doing <code>console.log(a[6]);</code> will print <code>undefined</code>.</p>
+</details>
+
+**[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+
+**45. What is JavaScript self-invoking anonymous function?**
+```js 
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<p><p>A self-invoking anonymous function runs immediately when we define it and doesn't have a name. E.g. </p><pre><code class="javascript">(function() {<div style="text-indent: 10px">console.log("this will print automatically");</div>})();</code></pre></p>
+</details>
+
+**[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+
+**46. What is the difference between a method and a function in javascript?**
+```js 
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<p><p>A function is a piece of code that is called by name and it is not associated with any object, nor defined inside an object. It can be passed data to operate on (i.e. parameter) and can optionally return data (the return value). E.g.:</p><pre><code class="javascript">/* Function definition*/<br>function myFunc() {<div style="text-indent: 10px">/* Do some stuff; */</div>}<br>myFunc();/* Calling the function */</code></pre><p>A method is a piece of code that is called by name and is defined inside an object. It is almost identical to a function except that it is always associated with an object and operating only on data inside it.</p><pre><code class="javascript">var methodObject = {<div style="text-indent: 10px">attribute: "xyz",</div><div style="text-indent: 10px">display: function () {  /* Method*/</div><div style="text-indent: 20px">console.log(this.attribute);</div><div style="text-indent: 10px">}</div>}methodObject.display(); /* Calling the method */</code></pre></p>
+</details>
+
+**[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+
+**47. Why would you use use strict at the beginning of a JavaScript source file?**
+```js 
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<p><p>Using strict is a way to enforce strict parsing and error handling of the JavaScript code at runtime. This means that code errors that would have otherwise been ignored or would have failed silently, will now generate errors or throw exceptions.</p><p>Some benefits are: easier debugging; preventing accidental globals, eliminates misuse of <code>this</code> etc.</p></p>
+</details>
+
+**[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+
+**48. What is the reason for wrapping the entire content of a JavaScript source file in a function block?**
+```js 
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<p>This is a common practice used in many popular JavaScript libraries (jQuery, Node.js, etc.). It creates a closure around the entire contents of the file which makes a private namespace and thereby avoids potential name clashes between different JavaScript modules and libraries.</p>
+</details>
+
+**[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+**49. What is prototype property in JavaScript?**
+```js
+let arr = [3, 4, 3, 2, 3, 4, 5, -6, 7];
+arr.length = 0;
+console.log(arr);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<p>Every JavaScript function has a prototype property (by default this property is null), that is mainly used for implementing inheritance. We add methods and properties to a function's prototype so that it becomes available to instances of that function.</p>
+</details>
+
+**[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+**50. Explain the difference between class inheritance and prototypal inheritance.**
+```js 
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<p><p></p><ul><li>Class Inheritance: A constructor function instantiates an instance via the "new" keyword. This new instance inherits properties from a parent class.</li><li>Prototypal Inheritance: An instance is created by cloning an existing object that serves as a prototype. Instances are typically instantiated via factory functions, object literals, or <code>Object.create()</code>. Instances may be composed from many different source objects, allowing for easy selective inheritance.</li></ul><p></p></p>
+</details>
+
+**[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+**51. How to call other class methods?**
+```js 
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<p><p>Using <code>call()</code> and <code>apply()</code> method we can use methods from different context to the current context. It is really helpful for code reusability and context binding.</p><ul><li><code>call()</code>: is used to call a function with a given <code>this</code> value and arguments provided individually.</li><li><code>apply()</code>: is used to call a function with a given <code>this</code> value and arguments provided as an array.</li></ul></p>
+</details>
+
+**[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+**52. What is Scope in JavaScript?**
+```js 
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<p><p>The scope determines the accessibility of variables, objects, and functions in particular part of your code.</p><p>In JavaScript, the scope can be of two types.</p><ul><li>1. Global Scope</li><li>2. Local Scope</li></ul></p>
+</details>
+
+**[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+**53. What is the difference between declaring a function in the two formats below?**
+```js
+var foo = function() {
+/* Some code */
+};
+function bar() {
+/* Some code */
+};
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<p>The main difference is that <code>foo</code> is defined at run-time whereas <code>bar</code> is defined at parse time. E.g.<pre><code class="javascript">/* Run-Time function declaration*/<br>foo(); /* Calling foo here will throw an error */<br>var foo = function() {<div style="text-indent: 10px">console.log("Hi I am inside Foo");</div>};</code></pre><pre><code class="javascript">/* Parse-Time function declaration */<br>bar(); /* Call bar function here, It will not give an Error */<br>function bar() {<div style="text-indent: 10px">console.log("Hi I am inside Foo");</div>};</code></pre></p>
+</details>
+
+**[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+**54. How does Array() differ from [] while creating a JavaScript array?**
+```js 
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<p><p>Both the <code>Array()</code> and <code>[]</code> work almost the same in JavaScript.</p>
+                <p>If we use them as is (i.e. without any argument) to create an array object, then they will result in an array object of zero length. Even if we pass a string or a list of strings as arguments, the result will be similar.
+                </p><p>However, they differ when the input argument is of integer type. In that case, the <array(n)> statement will create an uninitialized array of size n. Whereas, the <code>[n]</code> statement will create an array of size 1 and assign n as the value of the first element.</array(n)></p></p>
+</details>
+
+**[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+**55. What is the result of "10"+20+30 in JavaScript?**
+```js 
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<p><p>The result is 102030 because when using the <code>+</code> operator with a string, it acts as a string concatenation operator (not binary <code>+</code>). To make it work as expected, you should parse the <code>"10"</code> to integer before doing the <code>+</code>.</p></p>
+</details>
+
+**[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+**56. What does the isNaN() function do?**
+```js 
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<p>The <code>isNan()</code> function returns <code>true</code> if the variable value is not a number.</p>
+</details>
+
+**[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+**57. What is the difference between == and ===?**
+```js 
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<p><p>The <code>==</code> operator checks equality only, whereas <code>===</code> checks equality and data type i.e. the values must be of the same type.</p></p>
+</details>
+
+**[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+**58. What will be the output of the code below?**
+```js
+var trees = ["pine","apple","oak","maple","cherry"];
+delete trees[3];
+console.log(trees.length);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<p><p>The output would be 5. When we use the <code>delete</code> operator to delete an array element it doesn't unset the element in that position of the array, but sets it to <code>undefined</code> instead. So, the array length is not affected by the <code>delete</code> operation. This holds true even if you deleted all elements of an array using the <code>delete</code> operator.</p></p>
+</details>
+
+**[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+**59. What is a "closure" in JavaScript?**
+```js 
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<p><p>A closure is a function defined inside another function (called the parent function), and has access to variables that are declared and defined in the parent function scope.</p>
+                    <p>The closure has access to variables in three scopes:
+                        </p><ul>
+                            <li>Variables declared in their own scope</li>
+                            <li>Variables declared in a parent function scope</li>
+                            <li>Variables declared in the global namespace</li>
+                        </ul>
+                    <p></p></p>
+</details>
+
+**[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
+**60. What is the difference between undefined and not defined in JavaScript?**
+```js 
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<p><p>In JavaScript, if you try to use a variable that has not been declared, then JavaScript will throw an error <code>var x is not defined</code> and the script will stop executing. However, if you use <code>typeof undeclared_variable</code>, then it will return <code>undefined</code>.</p><p>Additionally, doing <code>console.log(x)</code>, when x has been declared, but not defined (doesn't have a value yet), will also print <code>undefined</code>.</p></p>
+</details>
+
+**[:top: Scroll to Top](#javascriptOutputBaseQuestions)**
