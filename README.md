@@ -450,11 +450,11 @@ const printName = () => {
 **28. What will be the output (shallow copy of an object)**
 ```js
 const userDetails = {
-  firstName: "Surbhi",
-  lastName: "Dighe",
+  firstName: "Pranabesh",
+  lastName: "Chand",
   age: 20,
   address: {
-    city: "Hyderabad",
+    city: "Bhubaneswar",
     country: "India",
   },
 };
@@ -616,7 +616,7 @@ console.log(var1, var2);
 **36. What will be the output**
 ```js
 const user = { 
-name: "Surbhi dighe", 
+name: "Pranabesh Chand", 
 country: "India" 
 };
 const { name: fullname, country } = user;
@@ -626,7 +626,7 @@ console.log(name);
 <details>
 	<summary><b>View Answer</b></summary>
 <ul>	
-	<li><b>Output</b> : Surbhi Dighe, ReferenceError: name is not defined</li>
+	<li><b>Output</b> : Pranabesh Chand, ReferenceError: name is not defined</li>
 	<li><b>Reason for console.log(fullname)</b> : The name property from user is assigned to a local variable fullname.</li>
 	<li><b>Reason for console.log(name)</b> : It gives an error because name was assigned to a local variable fullname and therefore name is not directly accessible.</li>
 </ul>
@@ -639,14 +639,14 @@ console.log(name);
 const person = {
   firstName: 'Surbhi',
 };
-const { lastName="dighe" } = person;
+const { lastName="chand" } = person;
 console.log(lastName);
 ```
 <details>
 	<summary><b>View Answer</b></summary>
 <ul>	
-	<li><b>Output</b> : dighe</li>
-	<li><b>Reason</b> : The lastName property is not defined in the person object and the destructuring syntax provides a default value ("dighe") to be used when the property is missing.</li>
+	<li><b>Output</b> : chand</li>
+	<li><b>Reason</b> : The lastName property is not defined in the person object and the destructuring syntax provides a default value ("chand") to be used when the property is missing.</li>
 </ul>
 </details>
 
